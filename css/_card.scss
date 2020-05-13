@@ -1,0 +1,48 @@
+main {
+  margin-bottom: 80px;
+}
+.cards {
+  @include boundaries();
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.text--medium {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  color: set-text-color($primary-color);
+}
+
+.card {
+  flex-direction: column;
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &hover {
+    transform: translateY(-7px);
+  }
+}
+
+.content {
+  margin: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.price {
+  margin-left: auto;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: lighten($primary-color, 10);
+}
